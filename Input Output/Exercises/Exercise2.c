@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 //1 Kilometer Per hour = 0.62 Miles Per Hour
-#define MPH 0.621371
+#define MPH 0.6213712
 
 /* Calculation to convert
 * Kmph --> Mph
