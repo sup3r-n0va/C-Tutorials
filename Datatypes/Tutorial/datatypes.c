@@ -62,6 +62,19 @@ int main(){
 
 	printf("My Name is %s\n\n", MyName);
 
+	//You can find the maximum amount of bytes each data
+	//type can hold
+	printf("\n");
+
+	printf("A char takes up %d bytes\n\n", sizeof(char));
+	printf("A int takes up %d bytes\n\n", sizeof(int));
+	printf("A long int takes up %d bytes\n\n", sizeof(long int));
+	printf("A float takes up %d bytes\n\n", sizeof(float));
+	printf("A double takes up %d bytes\n\n", sizeof(double));
+
+
+
+
 	return 0;
 
 
