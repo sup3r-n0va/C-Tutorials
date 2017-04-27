@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>	//for exit(0)
+
+char UserInput[254];
 
 int main()
 {
@@ -17,7 +20,7 @@ int main()
 
 	printf("\n");
 
-	int num = 1;
+	int num1 = 1;
 	int num2 = 2;
 
 	printf("Is 1 > 2 : %d\n\n", num1 > num2);
@@ -65,6 +68,7 @@ int main()
 	//Conditional Operator is used as
 	//short hand notation for if and else statement
 	int CustAge = 38;
+	int NumOfProducts = 23;
 	
 	char* LegalAge = (CustAge > 21) ? "true" : "false";
 
@@ -72,6 +76,42 @@ int main()
 
 	printf("I bought %s products\n\n", 
 		(NumOfProducts > 1) ? "many" : "one");
+
+	int WhatToDo = 0;
+	//DO WHILE will alway execute once
+	do{
+		printf("\n");
+		printf("1. What Time is It?\n");
+		printf("2. What is Todays Date?\n");
+		printf("3. What Day it it?\n");
+		printf("4.Quit\n");
+	
+		fgets(UserInput, sizeof(UserInput), stdin);
+		sscanf(UserInput, "%d", &WhatToDo);
+	} while(WhatToDo < 1 || WhatToDo > 4);
+
+	//How To Handle input with switch
+	//Switch checks the value provided and excutes 
+	// accordingly. (Value must be char or int)
+	// break is used to stop checking input against the
+	// other options. Without break other options would be
+	// checked
+
+	switch(WhatToDo){
+		case(1) :
+			printf("Print the time\n");
+			break;
+		case(2) :
+			printf("Print the date\n");
+			break;
+		case(3) :
+			printf("Print the day\n");
+			break;
+		default :
+			printf("Bye Bye\m");
+			exit(0);
+			break;
+	}
 
 
 
