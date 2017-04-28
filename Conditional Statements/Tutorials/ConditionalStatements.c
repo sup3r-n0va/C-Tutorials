@@ -108,7 +108,7 @@ int main()
 			printf("Print the day\n");
 			break;
 		default :
-			printf("Bye Bye\m");
+			printf("Bye Bye\n");
 			exit(0);
 			break;
 	}
